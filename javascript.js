@@ -1,31 +1,43 @@
 let listaCoches = [
     {
         "nome": "PONTIAC GTO",
+        "ano": "1967",
+        "preço": "R$ 680 MIL",
         "img": "img/PONTIAC.JPG",
         "descrição": "Fabricado pela General Motors ao longo de 4 gerações, de 1963 a 1974. O GTO estava no segmento dos Muscle Cars, iniciando essa tendência no mercado norte americano."
     },
     {
         "nome": "PORSCHE 356 B T-5 ROADSTER",
+        "ano": "1960",
+        "preço": "R$ 2.400.000,00",
         "img": "img/PORSCHE.JPG",
         "descrição": "Este 356 Roadster desenhado pelo famoso estúdio Bauhaus na Alemanha chegou no mercado ostentando beleza e esportividade."
     },
     {
         "nome": "CADILLAC ELDORADO",
+        "ano": "1954",
+        "preço": "R$ 980 mil",
         "img": "img/CADILLAC.png",
         "descrição": "Eldorado, um dos modelos mais famosos da Marca... o 54 é mais especial ainda, pois a Cadillac introduziu neste ano uma carroceria completamente nova, mais larga, mais baixa e mais longa."
     },
     {
         "nome": "MERCEDES-BENZ 190 SL",
+        "ano": "1961",
+        "preço": "R$ 1.250.000,00",
         "img": "img/MERCEDESBENZ.JPG",
         "descrição": "Em valorização no mercado mundial, a 190 SL é um ícone da indústria alemã. Charmosa, rara e muito prazerosa ao dirigir."
     },
     {
         "nome": "JEEP WILLYS CJ-5 4X4",
+        "ano": "1968",
+        "preço": "R$ 110 MIL",
         "img": "img/JEEPWILLYS.JPG",
         "descrição": "Nunca restaurado, somente repintado na linda cor marrom com interior original de fábrica."
     },
     {
         "nome": "KARMANN GHIA",
+        "ano": "1970",
+        "preço": "R$ 150 MIL",
         "img": "img/KARMANN.JPG",
         "descrição": "O Karmann-Ghia é um automóvel esportivo produzido pela Volkswagen, projetado pela empresa italiana Carrozzeria Ghia, e construído pela empresa alemã Karmann."
     }
@@ -49,6 +61,8 @@ listaCoches.map((coche, posicao)=>{
 function zoomimg(posicao){
     let cocheSelecionado = listaCoches[posicao];
     document.getElementById("nomeCoche").innerHTML = cocheSelecionado.nome;
+    document.getElementById("anoCoche").innerHTML = cocheSelecionado.ano;
+    document.getElementById("preçoCoche").innerHTML = cocheSelecionado.preço;
     document.getElementById("descCoche").innerHTML = cocheSelecionado.descrição;
     document.getElementById("imgmodal").src = cocheSelecionado.img;
 
